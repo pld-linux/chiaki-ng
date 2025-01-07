@@ -34,6 +34,7 @@ BuildRequires:	pkg-config
 BuildRequires:	speexdsp-devel
 BuildRequires:	udev-devel
 Requires:	vulkan(icd)
+ExcludeArch:	x32
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
