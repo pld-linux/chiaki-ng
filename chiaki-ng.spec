@@ -32,6 +32,7 @@ BuildRequires:	jerasure-devel
 BuildRequires:	libevdev-devel
 BuildRequires:	libplacebo-devel
 BuildRequires:	nanopb-devel
+BuildRequires:	nanopb-static
 BuildRequires:	openssl-devel
 BuildRequires:	pkg-config
 BuildRequires:	python3
