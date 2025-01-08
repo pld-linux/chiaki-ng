@@ -30,7 +30,7 @@ BuildRequires:	fftw3-devel
 BuildRequires:	hidapi-devel
 BuildRequires:	jerasure-devel
 BuildRequires:	libevdev-devel
-BuildRequires:	libplacebo-devel-6.338.2-1.x86_64
+BuildRequires:	libplacebo-devel
 BuildRequires:	nanopb-devel
 BuildRequires:	openssl-devel
 BuildRequires:	pkg-config
