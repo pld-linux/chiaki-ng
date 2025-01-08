@@ -22,6 +22,7 @@ BuildRequires:	Qt6Svg-devel
 BuildRequires:	Qt6WebEngine-devel
 BuildRequires:	Qt6Widgets-devel
 BuildRequires:	SDL2-devel
+BuildRequires:	Vulkan-Headers
 BuildRequires:	cmake
 BuildRequires:	curl-devel
 BuildRequires:	ffmpeg-devel
@@ -29,10 +30,14 @@ BuildRequires:	fftw3-devel
 BuildRequires:	hidapi-devel
 BuildRequires:	jerasure-devel
 BuildRequires:	libevdev-devel
+BuildRequires:	libplacebo-devel-6.338.2-1.x86_64
 BuildRequires:	nanopb-devel
+BuildRequires:	openssl-devel
 BuildRequires:	pkg-config
+BuildRequires:	python3
 BuildRequires:	speexdsp-devel
 BuildRequires:	udev-devel
+BuildRequires:	xorg-lib-libxkbcommon-devel
 Requires:	vulkan(icd)
 ExcludeArch:	x32
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
