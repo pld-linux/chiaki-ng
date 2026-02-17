@@ -4,13 +4,13 @@
 #
 Summary:	PlayStation Remote Play for Everyone
 Name:		chiaki-ng
-Version:	1.9.8
+Version:	1.9.9
 Release:	1
 License:	AGPL v3
 Group:		X11/Applications/Networking
 Source0:	https://github.com/streetpea/chiaki-ng/archive/v%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	6e5be68d23d14e01cf586ccaf2561892
-Patch0:		curl-lib.patch
+# Source0-md5:	9aa32f13d1fa4e015d74a3f904e230fb
+Patch0:		git.patch
 URL:		https://streetpea.github.io/chiaki-ng/
 BuildRequires:	Qt6Concurrent-devel
 BuildRequires:	Qt6Core-devel
@@ -52,7 +52,7 @@ Entertainment LLC.
 
 %prep
 %setup -q
-%patch -P 0 -p1
+%patch -P0 -p1
 
 %build
 mkdir -p build
