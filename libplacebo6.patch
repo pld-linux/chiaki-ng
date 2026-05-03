@@ -1,0 +1,35 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 2e175c0b..b9a199cb 100755
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -85,7 +85,7 @@ endif()
+ 
+ if(CHIAKI_ENABLE_GUI)
+ 	find_package(PkgConfig REQUIRED)
+-	pkg_check_modules(LIBPLACEBO REQUIRED libplacebo>=7.349.0 IMPORTED_TARGET)
++	pkg_check_modules(LIBPLACEBO REQUIRED libplacebo IMPORTED_TARGET)
+ endif()
+ 
+ if(CHIAKI_USE_SYSTEM_CURL)
+diff --git a/gui/src/qmlmainwindow.cpp b/gui/src/qmlmainwindow.cpp
+index 5918ab04..4c201f74 100644
+--- a/gui/src/qmlmainwindow.cpp
++++ b/gui/src/qmlmainwindow.cpp
+@@ -1545,7 +1545,7 @@ void QmlMainWindow::init(Settings *settings, bool exit_app_on_stream_exit)
+     render_backend = settings->GetRenderBackend();
+     setSurfaceType(render_backend == RenderBackend::Vulkan ? QWindow::VulkanSurface : QWindow::OpenGLSurface);
+     qparams = {};
+-    qparams.drift_compensation = 1e-3;
++//    qparams.drift_compensation = 1e-3;
+     qparams.interpolation_threshold = 0.01;
+     qparams.timeout = 0;
+ 
+@@ -2832,7 +2832,7 @@ void QmlMainWindow::render()
+     }
+     // Disable background transparency by default if the swapchain does not
+     // appear to support alpha transaprency
+-    if (sw_frame.color_repr.alpha == PL_ALPHA_NONE)
++    if (sw_frame.color_repr.alpha == PL_ALPHA_UNKNOWN)
+         params.background_transparency = 0.0;
+ 
+     const struct pl_hook *fsrcnnx_hook = nullptr;
